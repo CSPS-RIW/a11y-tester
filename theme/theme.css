@@ -254,6 +254,186 @@ details.list-toggle summary::marker {
   right: 0;
 }
 
+dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-85%, -74%);
+  border: none;
+  max-width: 35em;
+  width: 60%;
+  padding: 0;
+}
+dialog[open]::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+  animation: fadein-bd 500ms forwards;
+}
+@media (prefers-reduced-motion) {
+  dialog[open]::backdrop {
+    animation: fadein-bd 500ms forwards;
+  }
+}
+dialog .modal-content {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  outline: 0;
+}
+dialog .modal-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+dialog .modal-header h2, dialog .modal-header h3 {
+  flex-grow: 2;
+  margin-bottom: 0;
+}
+dialog .modal-header .close-modal {
+  outline: none;
+  border: none;
+  color: grey;
+  margin: 0.25rem 0.25rem 0 auto;
+  background-color: #fff;
+  padding: 0.25rem 1rem;
+  flex-shrink: 1;
+}
+dialog .modal-header .close-modal:focus, dialog .modal-header .close-modal:hover {
+  outline: 2px solid grey;
+}
+dialog .modal-body {
+  padding: 1rem;
+}
+dialog .modal-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+  border-top: 1px solid #dee2e6;
+  border-bottom-right-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+}
+dialog .modal-footer .close-modal {
+  border: 1px solid #14808A;
+  color: opacity(1);
+}
+dialog[showing] {
+  display: block;
+  inset: 0;
+  animation: fadein-md 500ms forwards, slidedown-modal 500ms forwards;
+}
+@media (prefers-reduced-motion) {
+  dialog[showing] {
+    animation: fadein-md 500ms forwards;
+  }
+}
+dialog[showing]::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+  animation: fadein-bd 500ms forwards;
+}
+@media (prefers-reduced-motion) {
+  dialog[showing]::backdrop {
+    animation: fadein-bd 500ms forwards;
+  }
+}
+dialog[hiding] {
+  display: block;
+  inset: 0;
+  animation: fadeout 555ms forwards, scaleout 550ms forwards;
+}
+@media (prefers-reduced-motion) {
+  dialog[hiding] {
+    animation: fadeout 550ms forwards;
+  }
+}
+dialog[hiding]::backdrop {
+  background-color: rgba(0, 0, 0, 0.4);
+  animation: fadeout-bd 555ms forwards;
+}
+@media (prefers-reduced-motion) {
+  dialog[hiding]::backdrop {
+    animation: fadeout-bd 500ms forwards;
+  }
+}
+
+@keyframes fieldup {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-5%);
+  }
+}
+@keyframes fielddown {
+  0% {
+    transform: translateY(-150%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes scaleout {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes scalein {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes slidedown-modal {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes fadein-bd {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+@keyframes fadeout-bd {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadein-md {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* *********************************************************
  * VARS
  * ********************************************************/

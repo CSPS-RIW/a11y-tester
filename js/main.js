@@ -11,6 +11,25 @@ $(document).ready(function () {
     });
     $("main").attr("aria-live", "assertive");
 
+
+    let lang = $("html").attr("lang");
+    let modTitle = $('.add-title');
+    let modBody = $('.modal-body');
+    let closeBtnLow = $('#btn_close_1');
+    setTimeout(() => {
+        $('#modal_1').attr('open', '')
+    }, 1000);
+
+    if (lang === 'fr') {
+        modTitle.html(`Suivez les instructions`);
+        modBody.html(`Trouver 10 problèmes d'accessibilité 🔎`);
+        closeBtnLow.text('close');
+    } else {
+        modTitle.html(`Follow the isntructions`);
+        modBody.html(`Find 10 accessibility issues 🔎`);
+        closeBtnLow.text('Fermer');
+    }
+
 });
 
 /* **********************************************
@@ -25,7 +44,7 @@ const Nav = {
         this.createPages(options.data);
         this.$el = options.$el
         this.currentPage = null;
-        this.lang=$("html").attr("lang");
+        this.lang = $("html").attr("lang");
 
     },
 
@@ -58,8 +77,8 @@ const Nav = {
         let $list = this.$el.children("ul");
         this.$el.children("ul").find("a").attr("tabindex", "-1");
         //label for dropdown
-        let aria=(this.lang==="fr")?
-            "Menu. Press Enter to open, then Down to navigate":
+        let aria = (this.lang === "fr") ?
+            "Menu. Press Enter to open, then Down to navigate" :
             "Menu. Appuyez sur la touche Entrée pour ouvrir, puis sur la touche Bas pour naviguer.";
         $link.attr("aria-label", aria);
         $link.attr("aria-haspopup", "true");
@@ -92,8 +111,8 @@ const Nav = {
     setPageof: function () {
         let pageIndex = this.currentPage.index + 1;
         let pageNb = this.pageList.length;
-        let of=(this.lang ==="fr")?" of ":" de ";
-        let pageOfTxt = pageIndex + of + pageNb;
+        let of = (this.lang === "fr") ? " of " : " de ";
+        let pageOfTxt = pageIndex + of +pageNb;
         $(".pageof").html(pageOfTxt);
     },
     initToolbar: function () {
@@ -110,12 +129,12 @@ const Nav = {
         });
 
         $help.click(function () {
-            let help=(that.lang==="fr")?"If you need help please contact helpme@email.com":"Si vous avez besoin d’aide, veuillez contacter helpme@email.com.";
+            let help = (that.lang === "fr") ? "If you need help please contact helpme@email.com" : "Si vous avez besoin d’aide, veuillez contacter helpme@email.com.";
             alert(help);
             return false;
         });
         $quit.click(function () {
-            let close=(that.lang==="fr")?"Closing course":"Fermeture du cours";
+            let close = (that.lang === "fr") ? "Closing course" : "Fermeture du cours";
             alert(close);
             return false;
         });
