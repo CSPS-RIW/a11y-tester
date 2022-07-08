@@ -16,15 +16,18 @@ $(document).ready(function () {
     let modTitle = $('.add-title');
     let modBody = $('.modal-body');
     let closeBtnLow = $('#btn_close_1');
-    setTimeout(() => {
-        $('#modal_1').attr('open', '')
-    }, 1000);
 
     if (lang === 'fr') {
+        setTimeout(() => {
+            $('#modal_1').attr('open', '')
+        }, 2000);
         modTitle.html(`Suivez les instructions`);
         modBody.html(`Trouver 10 problèmes d'accessibilité 🔎`);
         closeBtnLow.text('close');
     } else {
+        setTimeout(() => {
+            $('#modal_1').attr('open', '')
+        }, 1000);
         modTitle.html(`Follow the isntructions`);
         modBody.html(`Find 10 accessibility issues 🔎`);
         closeBtnLow.text('Fermer');
