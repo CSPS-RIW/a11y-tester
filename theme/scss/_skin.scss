@@ -1,0 +1,226 @@
+.top-nav {
+    background-color: $teal;
+
+    ul {
+        margin-bottom: 0;
+    }
+
+
+    &:before {
+        content: '';
+        display: block;
+        position: fixed;
+        height: 100px;
+        width: 100px;
+        background-color: #BAE7EB;
+
+        top: 0;
+        right: 0px;
+        width: 20%;
+        height: 48px;
+    }
+}
+
+#mainmenu_link {
+
+    font-family: "Aleo-Light";
+    font-weight: 600;
+}
+
+header {
+    height: 15em;
+}
+
+header:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url(images/banner.svg);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 14em;
+    top: 1em;
+    width: 80%;
+    left: 10%;
+}
+
+
+.course-title-block {
+    font-family: "Aleo-Light";
+    position: absolute;
+    margin: 4em 0em 1em 0em;
+    font-size: 2em;
+    border: 2px black solid;
+    padding: 5px 30px 5px 5px;
+
+    span {
+        display: block;
+        text-transform: uppercase;
+
+        &:first-of-type {
+            color: $green;
+            font-weight: 600;
+        }
+    }
+}
+
+/* **********************************************************
+ * titles
+ * *********************************************************/
+main {
+
+    h1,
+    h2,
+    h3 {
+        font-family: "Aleo-Light";
+        font-weight: 600;
+
+    }
+
+    h1 {
+        color: $green;
+        font-size: 2.1em;
+        margin-top: 2em;
+
+    }
+}
+
+/* **********************************************************
+ * backnext
+ * *********************************************************/
+
+html header .backnext a,
+.not-backnext a {
+    background-color: $dark-teal;
+    border-radius: 50%;
+    padding: 12px;
+
+    &.prev:before {
+        border-right-color: white;
+        margin: 5px 8px;
+    }
+
+    &.next:before {
+        border-left-color: white;
+        margin: 5px 8px;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $darker-teal;
+    }
+
+    &:focus {
+        outline: 1px solid $darker-teal;
+    }
+}
+
+/* ***************************************************** */
+[href*="https://www.tpsgc"] {
+    outline: none;
+}
+
+.mimic-h2 {
+    font-size: 1.3em;
+    color: black;
+    margin-top: 0;
+}
+
+.some-label {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.nav-block a {
+    outline: none;
+    background-color: transparent;
+    color: #f9f9f9;
+}
+
+p {
+    font-size: 17px;
+}
+
+figure {
+    -webkit-box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.the-list {
+    &>span {
+        display: block;
+        display: list-item;
+        list-style-type: disc;
+        list-style-position: inside;
+
+        &>span {
+            display: block;
+            display: list-item;
+            list-style-type: lower-alpha;
+            list-style-position: inside;
+            margin-left: 1.4em;
+        }
+    }
+}
+
+
+
+details.list-toggle {
+    summary {
+        background-color: #55bb55;
+        border-radius: 5px;
+        padding: 5px 15px;
+        border: 1px solid #ccc;
+
+        &:hover,
+        &:focus {
+            background-color: #66cc66;
+        }
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &::marker {
+            content: "";
+        }
+    }
+}
+
+.the-button {
+    background-color: #55bb55;
+
+    &:hover,
+    &:focus {
+        background-color: #66cc66;
+    }
+}
+
+.course-title-block {
+
+
+
+    &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: #A2B63B;
+        z-index: -1;
+    }
+}
+
+.not-backnext {
+    position: relative;
+
+    a {
+        color: white;
+        text-decoration: none;
+        position: absolute;
+        right: 0;
+    }
+}

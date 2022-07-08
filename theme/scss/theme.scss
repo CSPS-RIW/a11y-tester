@@ -1,0 +1,327 @@
+@import "./_colors";
+@import "./_mixins";
+@import "./_fonts";
+@import "./_skin";
+
+
+/* *********************************************************
+ * VARS
+ * ********************************************************/
+$font-size:16px;
+
+
+/* *********************************************************
+ *
+ * ********************************************************/
+body {
+    font-size: $font-size;
+}
+
+h1 {
+    font-size: 1.6em;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+header {
+    position: relative;
+}
+
+main {
+    min-height: 50vh;
+}
+
+
+/* *********************************************************
+ * BLOCK
+ * ********************************************************/
+
+.nav-block {
+    position: fixed;
+    display: block;
+    background: white;
+    color: black;
+    top: 0px;
+
+    h2 {
+        display: none;
+    }
+
+    ul {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    li {
+        list-style: none;
+
+        a {
+            overflow: hidden;
+            width: 0px;
+            height: 0px;
+            display: block;
+            padding: 0;
+
+            &:focus {
+                width: auto;
+                height: auto;
+                padding: 5px 10px;
+            }
+        }
+    }
+}
+
+
+
+/* *********************************************************
+ * TOOLBOX
+ * ********************************************************/
+.top-nav {
+    position: absolute;
+    display: block;
+    right: 0px;
+
+    h2 {
+        display: block;
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+        margin: 0;
+    }
+
+    ul {
+        padding: 0;
+        display: flex;
+        flex-flow: row wraph;
+
+        li {
+            list-style-type: none;
+        }
+    }
+
+    a {
+        color: black; //remove this to create a false flag error in contrast
+        @include top-icon();
+
+        &.home:before {
+            @include getIconsToolbar(home, black);
+        }
+
+        &.quit:before {
+            @include getIconsToolbar(quit, black);
+        }
+
+        &.help:before {
+            @include getIconsToolbar(help, black);
+        }
+
+        &.home:hover:before,
+        &.home:focus:before {
+            @include getIconsToolbar(home, DarkGreen);
+        }
+
+        &.quit:hover:before,
+        &.quit:focus:before {
+            @include getIconsToolbar(quit, DarkGreen);
+        }
+
+        &.help:hover:before,
+        &.help:focus:before {
+            @include getIconsToolbar(help, DarkGreen);
+        }
+
+
+        &.lang {
+            text-indent: 0;
+            width: 6rem;
+            position: relative;
+            top: -13px;
+
+            &:hover,
+            &:focus {
+                outline: none;
+            }
+        }
+
+
+
+    }
+}
+
+/* *********************************************************
+ * Main navigation
+ * ********************************************************/
+nav.main-nav {
+    position: absolute;
+    top: 15em;
+    margin-left: 0em;
+
+    h2 {
+
+        margin: 0;
+
+        a {
+            color: #fff;
+            background-color: $dark-green;
+            display: block;
+            padding: .4em 1em;
+            line-height: 1.5em;
+            width: fit-content;
+            text-decoration: none;
+
+            &:hover {
+                background-color: $green;
+            }
+
+            &:focus {
+                outline: 1px solid black;
+            }
+        }
+
+    }
+
+    ul {
+        background-color: #fafafa;
+        border: 1px solid #f1f1f1;
+        padding: 0px;
+        margin: 1px 0px;
+        width: fit-content;
+        position: absolute;
+        z-index: 1;
+    }
+
+    li {
+        list-style: none;
+
+        a {
+
+            color: #555;
+            display: block;
+            line-height: 1.5em;
+            text-decoration: none;
+            padding: 3px 10px;
+
+            &:hover {
+                background-color: #e1e1e1;
+            }
+
+        }
+    }
+
+}
+
+
+
+
+
+/* *********************************************************
+ * backnext
+ * ********************************************************/
+$backnext-icon-color:black;
+
+.backnext,
+.not-backnext {
+
+    header & {
+        margin-top: 25px;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+
+        a {
+            display: inline-block;
+            position: relative;
+            width: 15px;
+            height: 15px;
+            overflow: hidden;
+            text-indent: -9999px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            border: 1px #555 solid;
+            padding: 10px;
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0px;
+                top: 0;
+                width: 0;
+                height: 0;
+                margin: 3px 6px;
+            }
+
+            &:focus,
+            &:hover {
+                background-color: #e1e1e1;
+            }
+        }
+    }
+
+
+    a.prev:before {
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+        border-right: 7px solid $backnext-icon-color;
+    }
+
+    a.next:before {
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+
+        border-left: 7px solid $backnext-icon-color;
+    }
+
+    .pageof {
+        display: inline-block;
+        position: relative;
+        height: 17px;
+
+        top: 0;
+        font-size: 0.8em;
+        vertical-align: top;
+
+    }
+}
+
+footer .backnext {
+    text-align: right;
+
+    a {
+        //border:1px solid #555;
+        padding: 5px 10px;
+        background-color: #f1f1f1;
+        color: #555;
+        text-decoration: none;
+
+        &:hover {
+            background-color: #e1e1e1;
+        }
+    }
+}
+
+
+/* *********************************************************
+ * disabke
+  * ********************************************************/
+.disabled {
+    .backnext & {
+        cursor: default;
+        background-color: #e1e1e1 !important;
+        opacity: 0.5;
+    }
+
+}
+
+
+
+/* *********************************************************
+ * Buttons
+ * ********************************************************/
+button.quite-small {
+    padding: 0px;
+    line-height: 0.8;
+    font-size: 11px;
+}

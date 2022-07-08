@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canada Test of Public Service</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./js/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- course theme -->
+    <link href="./theme/theme.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="col-lg-8 mx-auto">
+        <header class="align-items-center pb-3 mb-5 border-bottom">
+            <!-- BYPASS BLOCK-->
+            <nav class="nav-block">
+                <h2>Bloc de contournement</h2>
+                <ul>
+                    <li>
+                        <a href="#dynamic_content">Passer au contenu principale</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- MENU AREA-->
+            <nav class="top-nav">
+                <h2>Barre d'outils</h2>
+                <ul role="menu" id="toolbar">
+                    <li role="none"><a href="#" role="menuitem" class="home">Accueil</a>
+                    </li>
+                    <li role="none"><a href="#" role="menuitem" class="help"
+                            aria-haspopup="true">Aide</a></li>
+                    <li role="none"><a href="#" role="menuitem" class="quit">Quitter</a>
+                    </li>
+                    <li role="none"><a href="/index.html" role="menuitem"
+                            class="lang">Language</a></li>
+                </ul>
+            </nav>
+
+            <!-- COURSE TITLE -->
+            <h2 class="course-title-block"><span class="course-title">Titre du
+                    cours</span> <span class="course-subtitle">Sous-titre du cours</span>
+            </h2>
+            <!-- MENU AREA-->
+            <nav class="main-nav">
+                <h2><a href="#" id='mainmenu_link'>Menu</a></h2>
+                <ul role="menu" id="main_menu"></ul>
+            </nav>
+
+            <!--Back Next-->
+            <nav class="backnext">
+                <a href="#" class="prev">Pages précédente</a>
+                <span class="pageof"></span>
+                <a href="#" class="next">Page suivante</a>
+
+            </nav>
+        </header>
+
+        <!-- MAIN AREA-->
+        <main id="dynamic_content" class="container"></main>
+        <!-- FOOTER AREA-->
+        <footer class="row container">
+
+            <nav class="backnext offset-sm-9 col-sm-3">
+                <a href="#" class="prev col-1 prev">Précédent</a>
+                <span class="pageof"></span>
+                <a href="#" class="next col-1 next">Suivant</a>
+            </nav>
+    </div>
+    </footer>
+    </div>
+    <!-- SCRIPTS-->
+    <script src="./js/jquery.js"></script>
+    <script src="./js/plugins/bootstrap/js/bootstrap.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/tweak.js"></script>
+</body>
+
+</html>

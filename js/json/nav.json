@@ -1,0 +1,18 @@
+{
+    "p1": {
+        "page": "p1",
+        "title": "How Thing works",
+        "title_fr": "Fonctionnement"
+    },
+    "p2": {
+        "page": "p2",
+        "title": "Separating Power",
+        "title_fr": "Séparation des pouvoirs"
+
+    },
+    "p3": {
+        "page": "p3",
+        "title": "What Do You Know?",
+        "title_fr": "Que savez-vous?"
+    }
+}
