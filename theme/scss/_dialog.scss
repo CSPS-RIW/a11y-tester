@@ -2,11 +2,16 @@ dialog {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-85%, -74%);
+    transform: translate(-50%, -50%);
     border: none;
     max-width: 35em;
     width: 60%;
     padding: 0;
+    z-index: 10000000;
+
+    @media screen and (min-width: 1200px) {
+        transform: translate(-66%, -60%);
+    }
 
     &[open]::backdrop {
         background-color: rgba(0, 0, 0, 0.6);
