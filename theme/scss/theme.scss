@@ -35,6 +35,23 @@ main {
     min-height: 50vh;
 }
 
+a {
+    &.external {
+        &::after {
+            content: '';
+            background: url(./images/icon_external_link.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 15px;
+            height: 15px;
+            overflow: hidden;
+            color: #0000;
+            display: inline-block;
+            margin-left: 3px;
+        }
+
+    }
+}
 
 /* *********************************************************
  * BLOCK
