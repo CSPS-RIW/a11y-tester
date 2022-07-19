@@ -21,34 +21,56 @@
   align-items: center;
   justify-content: center;
 }
-.not-found .not-div .alert {
-  width: 80vw;
-  text-align: center;
-}
-@media only screen and (min-width: 1024px) {
-  .not-found .not-div .alert {
-    width: 35vw;
-  }
-}
-.not-found .not-div .alert p {
-  margin: 0;
-}
 .not-found .not-div h1 {
   color: #465D2D;
   margin-bottom: 1rem;
   margin-top: 0;
-  text-align: center;
   font-family: "OpenSans", sans-serif;
   font-weight: 400;
 }
 .not-found .not-div h2 {
   color: #0D5F68;
-  text-align: center;
   font-family: "OpenSans", sans-serif;
   font-weight: 400;
 }
-.not-found .not-div h2 + section {
-  margin-bottom: 1rem;
+.not-found .not-div .wrapper {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.not-found .not-div .wrapper section {
+  padding: 0.25rem;
+}
+.not-found .not-div .wrapper section .icon-nf {
+  position: relative;
+  padding-left: 3rem;
+  padding-top: 0.4rem;
+  /*
+  new
+      */
+  position: relative;
+  /* Mobile Sizing - up to $screen-md*/
+  line-height: 1.5;
+  padding-left: 3rem;
+  padding-top: 0.4rem;
+}
+.not-found .not-div .wrapper section .icon-nf::before {
+  /* 
+
+  New
+
+  */
+  content: "";
+  display: block;
+  position: absolute;
+  width: 2.3em;
+  height: 2.3em;
+  left: -10px;
+  top: -9px;
+  background-image: url(./images/triangle-exclamation-solid.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90%;
 }
 .not-found .not-div a {
   color: #0D5F68;

@@ -25,40 +25,91 @@
         align-items: center;
         justify-content: center;
 
-        .alert {
-            width: 80vw;
-            text-align: center;
-
-            @media only screen and (min-width : 1024px) {
-                width: 35vw;
-            }
-
-            p {
-                margin: 0;
-            }
-        }
-
         h {
             &1 {
                 color: c.$dark-green;
                 margin-bottom: 1rem;
                 margin-top: 0;
-                text-align: center;
                 font-family: 'OpenSans', sans-serif;
                 font-weight: 400;
             }
 
             &2 {
                 color: c.$a11y-teal;
-                text-align: center;
                 font-family: 'OpenSans', sans-serif;
                 font-weight: 400;
-
-                +section {
-                    margin-bottom: 1rem;
-                }
             }
 
+        }
+
+        .wrapper {
+            display: flex;
+            gap: 1rem;
+
+            margin-top: 2rem;
+
+            section {
+                padding: 0.25rem;
+
+                .icon-nf {
+                    position: relative;
+                    padding-left: 3rem;
+                    padding-top: 0.4rem;
+
+                    /*
+                new
+                    */
+
+                    position: relative;
+                    /* Mobile Sizing - up to $screen-md*/
+                    line-height: 1.5;
+                    padding-left: 3rem;
+                    padding-top: 0.4rem;
+
+                    &::before {
+                        // content: '';
+                        // display: block;
+                        // background-image: url(./images/triangle-exclamation-solid.svg);
+                        // background-repeat: no-repeat;
+                        // height: 56px;
+                        // width: 3em;
+                        // position: absolute;
+                        // top: -1.345em;
+                        // left: 3.5em;
+                        // margin-top: 0;
+
+                        /* 
+                        
+                        New
+                        
+                        */
+
+                        content: '';
+                        display: block;
+                        position: absolute;
+
+                        // -----position
+                        width: 2.3em;
+                        height: 2.3em;
+                        left: -10px;
+                        top: -9px;
+                        // -----ICON
+                        background-image: url(./images/triangle-exclamation-solid.svg);
+                        background-repeat: no-repeat;
+                        background-position: center; //50% 0;
+                        background-size: 90%;
+                        // ----background circle
+                        // background-color: #ccc;
+                        // border-radius: 50%;
+                    }
+
+                    &.bit-left {
+                        &::before {
+                            // left: 2em;
+                        }
+                    }
+                }
+            }
         }
 
         a {
