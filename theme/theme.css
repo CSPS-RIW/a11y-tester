@@ -16,6 +16,10 @@
 }
 .not-found .not-div {
   margin-top: 2rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -26,16 +30,22 @@
   margin-bottom: 1rem;
   margin-top: 0;
   font-family: "OpenSans", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
+  font-size: 2.25rem;
 }
 .not-found .not-div h2 {
   color: #0D5F68;
   font-family: "OpenSans", sans-serif;
   font-weight: 400;
+  font-size: 1.75rem;
 }
 .not-found .not-div .wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  gap: 1rem;
+  gap: 3rem;
   margin-top: 2rem;
 }
 .not-found .not-div .wrapper section {
@@ -43,42 +53,30 @@
 }
 .not-found .not-div .wrapper section .icon-nf {
   position: relative;
-  padding-left: 3rem;
+  padding-left: 4rem;
   padding-top: 0.4rem;
-  /*
-  new
-      */
   position: relative;
-  /* Mobile Sizing - up to $screen-md*/
-  line-height: 1.5;
-  padding-left: 3rem;
-  padding-top: 0.4rem;
 }
 .not-found .not-div .wrapper section .icon-nf::before {
-  /* 
-
-  New
-
-  */
   content: "";
   display: block;
   position: absolute;
   width: 2.3em;
   height: 2.3em;
-  left: -10px;
-  top: -9px;
+  left: -6px;
+  top: -16px;
   background-image: url(./images/triangle-exclamation-solid.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 90%;
 }
-.not-found .not-div a {
+.not-found .not-div .wrapper a {
   color: #0D5F68;
 }
-.not-found .not-div a:hover, .not-found .not-div a:focus {
+.not-found .not-div .wrapper a:hover, .not-found .not-div .wrapper a:focus {
   color: #465D2D;
 }
-.not-found .not-div a:visited {
+.not-found .not-div .wrapper a:visited {
   color: #813399;
 }
 .not-found .not-div img.responsive {
