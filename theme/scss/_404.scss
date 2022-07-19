@@ -54,12 +54,23 @@
             display: -ms-flexbox;
             display: -webkit-flex;
             display: flex;
-            gap: 3rem;
+            flex-flow: column wrap;
+            gap: 1rem;
+            margin-top: 1rem;
 
-            margin-top: 2rem;
+            @media screen and (min-width: 992px) {
+                flex-flow: row nowrap;
+                gap: 3rem;
+                margin-top: 2rem;
+            }
 
             section {
                 padding: 0.25rem;
+
+                .error {
+                    margin-bottom: 0;
+                    font-weight: 500;
+                }
 
                 .icon-nf {
                     position: relative;
