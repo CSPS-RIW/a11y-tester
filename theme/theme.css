@@ -1,3 +1,102 @@
+.not-found {
+  margin-right: 0;
+}
+.not-found p {
+  font-size: 1.25rem;
+}
+.not-found hr {
+  height: 1px;
+  background-color: #ccc;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  min-width: 55vw;
+  max-width: 60vw;
+}
+.not-found .not-div {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+.not-found .not-div h1 {
+  color: #465D2D;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 300;
+  font-size: 2.25rem;
+}
+.not-found .not-div h2 {
+  color: #0D5F68;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 400;
+  font-size: 1.75rem;
+}
+.not-found .not-div .wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 992px) {
+  .not-found .not-div .wrapper {
+    flex-flow: row nowrap;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+}
+.not-found .not-div .wrapper section {
+  padding: 0.25rem;
+}
+.not-found .not-div .wrapper section .error {
+  margin-bottom: 0;
+  font-weight: 500;
+}
+.not-found .not-div .wrapper section .icon-nf {
+  position: relative;
+  padding-left: 4rem;
+  padding-top: 0.4rem;
+  position: relative;
+}
+.not-found .not-div .wrapper section .icon-nf::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 2.3em;
+  height: 2.3em;
+  left: -6px;
+  top: -16px;
+  background-image: url(./images/triangle-exclamation-solid.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90%;
+}
+.not-found .not-div .wrapper a {
+  color: #0D5F68;
+}
+.not-found .not-div .wrapper a:hover, .not-found .not-div .wrapper a:focus {
+  color: #465D2D;
+}
+.not-found .not-div .wrapper a:visited {
+  color: #813399;
+}
+.not-found .not-div img.responsive {
+  margin-top: 1rem;
+  max-width: 40vw;
+  max-height: 45vh;
+}
+
 /* *************************************************************
  * GET THE SVG CODE
  * ************************************************************/

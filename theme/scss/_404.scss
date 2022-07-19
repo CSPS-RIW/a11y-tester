@@ -1,0 +1,122 @@
+@use './colors'as c;
+
+.not-found {
+    margin-right: 0;
+
+    p {
+        font-size: 1.25rem;
+    }
+
+    hr {
+        height: 1px;
+        background-color: #ccc;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        min-width: 55vw;
+        max-width: 60vw;
+    }
+
+    .not-div {
+        margin-top: 2rem;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+
+        h {
+            &1 {
+                color: c.$dark-green;
+                margin-bottom: 1rem;
+                margin-top: 0;
+                font-family: 'OpenSans', sans-serif;
+                font-weight: 300;
+                font-size: 2.25rem;
+            }
+
+            &2 {
+                color: c.$a11y-teal;
+                font-family: 'OpenSans', sans-serif;
+                font-weight: 400;
+                font-size: 1.75rem;
+            }
+
+        }
+
+        .wrapper {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            flex-flow: column wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+
+            @media screen and (min-width: 992px) {
+                flex-flow: row nowrap;
+                gap: 3rem;
+                margin-top: 2rem;
+            }
+
+            section {
+                padding: 0.25rem;
+
+                .error {
+                    margin-bottom: 0;
+                    font-weight: 500;
+                }
+
+                .icon-nf {
+                    position: relative;
+                    padding-left: 4rem;
+                    padding-top: 0.4rem;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+
+                        // -----position
+                        width: 2.3em;
+                        height: 2.3em;
+                        left: -6px;
+                        top: -16px;
+                        // -----ICON
+                        background-image: url(./images/triangle-exclamation-solid.svg);
+                        background-repeat: no-repeat;
+                        background-position: center; //50% 0;
+                        background-size: 90%;
+                    }
+                }
+            }
+
+            a {
+                color: c.$a11y-teal;
+
+                &:hover,
+                &:focus {
+                    color: c.$dark-green;
+                }
+
+                &:visited {
+                    color: c.$visited;
+                }
+            }
+
+        }
+
+        img.responsive {
+            margin-top: 1rem;
+            max-width: 40vw;
+            max-height: 45vh;
+        }
+
+    }
+}
