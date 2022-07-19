@@ -37,12 +37,17 @@
             &1 {
                 color: c.$dark-green;
                 margin-bottom: 1rem;
+                margin-top: 0;
                 text-align: center;
+                font-family: 'OpenSans', sans-serif;
+                font-weight: 400;
             }
 
             &2 {
                 color: c.$a11y-teal;
                 text-align: center;
+                font-family: 'OpenSans', sans-serif;
+                font-weight: 400;
 
                 +section {
                     margin-bottom: 1rem;
@@ -67,7 +72,7 @@
 
 
         img {
-            width: 45vw;
+            width: 40vw;
         }
 
 

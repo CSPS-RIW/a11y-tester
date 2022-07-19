@@ -30,11 +30,16 @@
 .not-found .not-div h1 {
   color: #465D2D;
   margin-bottom: 1rem;
+  margin-top: 0;
   text-align: center;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 400;
 }
 .not-found .not-div h2 {
   color: #0D5F68;
   text-align: center;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 400;
 }
 .not-found .not-div h2 + section {
   margin-bottom: 1rem;
@@ -49,7 +54,7 @@
   color: #813399;
 }
 .not-found .not-div img {
-  width: 45vw;
+  width: 40vw;
 }
 
 /* *************************************************************
