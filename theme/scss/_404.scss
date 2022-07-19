@@ -1,0 +1,76 @@
+@use './colors'as c;
+
+.not-found {
+    margin-right: 0;
+
+    p {
+        font-size: 1.25rem;
+    }
+
+    hr {
+        height: 1px;
+        background-color: #ccc;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        width: 50vw;
+    }
+
+    .not-div {
+        margin-top: 2rem;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+
+        .alert {
+            width: 45vw;
+            text-align: center;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        h {
+            &1 {
+                color: c.$dark-green;
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+
+            &2 {
+                color: c.$a11y-teal;
+                text-align: center;
+
+                +section {
+                    margin-bottom: 1rem;
+                }
+            }
+
+        }
+
+        a {
+            color: c.$a11y-teal;
+
+            &:hover,
+            &:focus {
+                color: c.$green;
+            }
+
+            &:visited {
+                color: c.$visited;
+            }
+        }
+
+
+
+        img {
+            width: 45vw;
+        }
+
+
+
+    }
+}
