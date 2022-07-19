@@ -14,7 +14,8 @@
         margin-bottom: 1rem;
         border: 0;
         border-top: 1px solid rgba(0, 0, 0, 0.1);
-        width: 50vw;
+        min-width: 55vw;
+        max-width: 60vw;
     }
 
     .not-div {
@@ -25,8 +26,12 @@
         justify-content: center;
 
         .alert {
-            width: 45vw;
+            width: 80vw;
             text-align: center;
+
+            @media only screen and (min-width : 1024px) {
+                width: 35vw;
+            }
 
             p {
                 margin: 0;
@@ -71,8 +76,10 @@
 
 
 
-        img {
-            width: 40vw;
+        img.responsive {
+            margin-top: 1rem;
+            max-width: 40vw;
+            max-height: 45vh;
         }
 
 

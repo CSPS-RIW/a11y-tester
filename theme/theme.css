@@ -11,7 +11,8 @@
   margin-bottom: 1rem;
   border: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  width: 50vw;
+  min-width: 55vw;
+  max-width: 60vw;
 }
 .not-found .not-div {
   margin-top: 2rem;
@@ -21,8 +22,13 @@
   justify-content: center;
 }
 .not-found .not-div .alert {
-  width: 45vw;
+  width: 80vw;
   text-align: center;
+}
+@media only screen and (min-width: 1024px) {
+  .not-found .not-div .alert {
+    width: 35vw;
+  }
 }
 .not-found .not-div .alert p {
   margin: 0;
@@ -53,8 +59,10 @@
 .not-found .not-div a:visited {
   color: #813399;
 }
-.not-found .not-div img {
-  width: 40vw;
+.not-found .not-div img.responsive {
+  margin-top: 1rem;
+  max-width: 40vw;
+  max-height: 45vh;
 }
 
 /* *************************************************************
