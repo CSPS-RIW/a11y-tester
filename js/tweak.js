@@ -64,7 +64,7 @@ function timeout(page) {
 }
 
 function switchNext(page) {
-    console.log(page)
+    // console.log(page)
     if (page.index === 0) {
         $("footer .backnext").hide()
     } else {
