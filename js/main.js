@@ -237,6 +237,7 @@ const Nav = {
         });
         //click on link
         $link.click(function (e) {
+            // e.preventDefault();
             that.showMenu();
             that.pressDown();
         });

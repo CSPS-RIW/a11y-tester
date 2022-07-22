@@ -345,6 +345,7 @@ details.list-toggle summary::marker {
 
 .not-backnext {
   position: relative;
+  margin-bottom: 4.25rem;
 }
 .not-backnext a {
   color: white;
